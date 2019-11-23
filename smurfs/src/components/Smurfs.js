@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import Smurf from './Smurf';
 import { connect } from 'react-redux';
 import { getSmurfs } from '../actions/';
+import SmurfForm from './SmurfForm';
 
 const Smurfs = props => {
   console.log('SMURFS PROPS', props);
@@ -16,6 +17,7 @@ const Smurfs = props => {
       {props.state.map(smurf => (
         <Smurf key={smurf.id} smurf={smurf} />
       ))}
+      <SmurfForm />
     </div>
   );
 };
