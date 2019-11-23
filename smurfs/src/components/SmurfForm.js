@@ -21,8 +21,8 @@ const SmurfForm = props => {
   const addSmurf = e => {
     e.preventDefault();
     console.log('ADDED SMURF', newSmurf);
-    props.addSmurf({ ...newSmurf, id: props.state.length });
-    setNewSmurf({ name: '', age: '', height: '' });
+    props.addSmurf({ ...newSmurf, id: props.state.length});
+    setNewSmurf({...newSmurf, name: '', age: '', height: '' });
   };
 
   return (
